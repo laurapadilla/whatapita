@@ -6,25 +6,14 @@ export default function Marquee() {
   // target the span
   // update span with title const
 
-  const marqueeRef = useRef(null);
-  const marqueeSpanRef = useRef(null);
+  const title = "Official PITA Rankings — ";
 
-  const makeMarquee = () => {
-    const title = "Official PITA Rankings — ";
-
-    const marqueeText = new Array(100).fill(title).join("  ");
-
-    marqueeSpanRef.current.dangerouslySetInnerHTML = marqueeText;
-  };
-
-  useEffect(() => {
-    makeMarquee();
-  });
+  const marqueeText = new Array(100).fill(title).join("  ");
 
   return (
     <header className={styles.marqueeContainer}>
-      <div ref={marqueeRef} className={styles.marquee}>
-        <span ref={marqueeSpanRef}>Official PITA Rankings — </span>
+      <div className={styles.marquee}>
+        <span>{marqueeText}</span>
       </div>
     </header>
   );
