@@ -1,4 +1,3 @@
-import React, { useRef, useEffect } from "react";
 import styles from "../styles/Home.module.scss";
 
 export default function Marquee() {

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import rankings from "./data";
 import styles from "../styles/Home.module.scss";
 
 export default function Rank({ rank, info, stat }) {
