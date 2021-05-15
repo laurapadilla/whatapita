@@ -46,7 +46,7 @@
 
 header.header {
   width: 100%;
-  padding: 2rem 3rem;
+  padding: 1rem;
   font-size: 1.5rem;
 }
 
@@ -98,7 +98,7 @@ main.main {
 }
 
 h1.title {
-  font-size: 5vw;
+  font-size: min(8vw, 100px);
   line-height: 1.2;
   letter-spacing: 0;
 }
@@ -133,7 +133,7 @@ article.rank header h3 {
 article.rank p.info {
   width: 100%;
   font-size: 1.2rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 article.rank p.stat {
@@ -167,6 +167,10 @@ article.opened div.status {
 }
 
 @media (min-width: 768px) {
+  header.header {
+    padding: 2rem 3rem;
+  }
+
   section.intro {
     padding: 2rem 3rem 3rem 3rem;
   }
@@ -190,10 +194,8 @@ article.opened div.status {
   article div.status {
     width: 35px;
     height: 35px;
-    background: transparent;
+
     border: 3px solid $black;
-    border-radius: 100px;
-    transition: 0.3s;
   }
 
   article div.statusFill {
@@ -201,7 +203,5 @@ article.opened div.status {
     width: 35px;
     height: 35px;
     border: 3px solid $black;
-    border-radius: 100px;
-    transition: 0.3s;
   }
 }
