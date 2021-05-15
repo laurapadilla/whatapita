@@ -38,7 +38,7 @@ const rankings = [
   {
     id: 7,
     rank: "Admiral PITA",
-    info: "Admirals are on another level. Equate this to your packages constantly getting lost in the mail, someone rear-ending you, and they don't have insurance, or not being able to figure out why the code isn't working!!! Ultimate PITA.",
+    info: "Admirals are on another level. Equate this to your packages constantly getting lost in the mail, TicketMaster crashing as your about to pay for your overprices concert tickets, or not being able to figure out why the code isn't working!!! Ultimate PITA.",
     stat: "Extreme",
   },
   {
