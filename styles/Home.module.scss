@@ -88,7 +88,7 @@ article.marqueeContainer {
   position: relative;
   width: 100vw;
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: $red;
 }
 
@@ -203,5 +203,16 @@ article.opened div.status {
     width: 35px;
     height: 35px;
     border: 3px solid $black;
+  }
+
+  .marquee span {
+    animation: moveLeft 600s linear infinite;
+    white-space: nowrap;
+    display: block;
+    position: relative;
+    width: 100vw;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: $red;
   }
 }
