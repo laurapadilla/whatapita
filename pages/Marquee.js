@@ -11,10 +11,10 @@ export default function Marquee() {
   const marqueeText = new Array(100).fill(title).join("  ");
 
   return (
-    <header className={styles.marqueeContainer}>
+    <article className={styles.marqueeContainer}>
       <div className={styles.marquee}>
         <span>{marqueeText}</span>
       </div>
-    </header>
+    </article>
   );
 }

@@ -19,6 +19,15 @@ export default function Home() {
         ></link>
       </Head>
 
+      <header className={styles.header}>
+        <nav>
+          <button className={styles.btn}>About PITAs</button>
+          <a href="#" className={styles.btn}>
+            Twitter
+          </a>
+        </nav>
+      </header>
+
       <Marquee />
 
       <main className={styles.main}>
@@ -27,7 +36,7 @@ export default function Home() {
             className={`${styles.title} ${styles.poynteroldstyledisplaynarrowregular}`}
           >
             The official rankings guide of the different types of PITAs (pains
-            in the ass) you can and will encounter at work.
+            in the ass) you can and will encounter in life.
           </h1>
         </section>
 
@@ -39,9 +48,7 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-        <a href="#">About PITAs</a>
         <a href="#">made by @1aurapadilla</a>
-        <button href="#">Go Dark</button>
       </footer>
     </>
   );
