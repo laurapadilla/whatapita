@@ -28,6 +28,41 @@
   font-weight: normal;
 }
 
+header.marqueeContainer {
+  width: 100vw;
+  background-color: aliceblue;
+}
+
+.marquee {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  font-size: 20rem;
+  overflow: hidden;
+  padding: 5px 10px;
+  z-index: -1;
+  transform: translateY(-50%);
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-2000vw);
+  }
+}
+
+.marquee span {
+  animation: moveLeft 600s linear infinite;
+  white-space: nowrap;
+  display: block;
+  position: relative;
+  width: 100vw;
+  color: red;
+}
+
 main.main {
   width: 100%;
   height: 100%;
@@ -36,6 +71,7 @@ main.main {
 h1.title {
   font-size: 5vw;
   line-height: 1.2;
+  letter-spacing: 0;
 }
 
 section.intro {
@@ -43,14 +79,20 @@ section.intro {
 }
 
 article.rank {
-  padding: 1.5rem 3rem;
+  padding: 2.2rem 3rem;
   border-bottom: 1px solid $black;
+}
+
+article div.titleContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
 
 article.rank header {
   display: flex;
   align-items: center;
-  margin-bottom: 1rem;
+  cursor: pointer;
 }
 
 article.rank header h3 {
@@ -59,9 +101,15 @@ article.rank header h3 {
   line-height: 35px;
 }
 
-article.rank p {
-  max-width: 900px;
+article.rank p.info {
+  max-width: 75vw;
   width: 100%;
+  font-size: 24px;
+  margin-top: 2rem;
+}
+
+article.rank p.stat {
+  text-align: right;
 }
 
 article div.status {
@@ -70,7 +118,17 @@ article div.status {
   background: transparent;
   border: 3px solid $black;
   border-radius: 100px;
-  margin-top: 4px;
+
+  transition: 0.3s;
+}
+
+article div.statusFill {
+  background: $black;
+  width: 35px;
+  height: 35px;
+  border: 3px solid $black;
+  border-radius: 100px;
+
   transition: 0.3s;
 }
 

@@ -1,8 +1,9 @@
+import React, { useRef } from "react";
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.scss";
 import rankings from "./data";
-import Rank from "./Rankings";
+import Rank from "./Rank";
+import Marquee from "./Marquee";
 
 export default function Home() {
   return (
@@ -18,7 +19,7 @@ export default function Home() {
         ></link>
       </Head>
 
-      <div className={styles.marquee}>{/* marquee code goes in here */}</div>
+      <Marquee />
 
       <main className={styles.main}>
         <section className={styles.intro}>
@@ -31,7 +32,6 @@ export default function Home() {
         </section>
 
         <section className={styles.rankings}>
-          {/* Rankings component */}
           {rankings.map((rank) => {
             return <Rank key={rank.id} {...rank}></Rank>;
           })}
@@ -39,16 +39,9 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
+        <a href="#">About PITAs</a>
+        <a href="#">made by @1aurapadilla</a>
+        <button href="#">Go Dark</button>
       </footer>
     </>
   );
