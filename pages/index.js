@@ -1,6 +1,6 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.scss";
-import rankings from "./data";
+import rankings from "../data/data";
 import Rank from "./Rank";
 import Marquee from "./Marquee";
 
