@@ -65,7 +65,7 @@ article.marqueeContainer {
   top: 50%;
   left: 0;
   width: 100%;
-  font-size: 20vw;
+  font-size: 30vw;
   overflow: hidden;
   padding: 5px 10px;
   z-index: -1;
@@ -87,7 +87,6 @@ article.marqueeContainer {
   display: block;
   position: relative;
   width: 100vw;
-  // color: $red;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: $red;
