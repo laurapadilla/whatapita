@@ -1,10 +1,13 @@
+import React, { useState } from "react";
 import Head from "next/head";
 import styles from "../styles/Home.module.scss";
 import rankings from "../data/data";
 import Rank from "./Rank";
 import Marquee from "./Marquee";
+import Modal from "./Modal";
 
 export default function Home() {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <>
       <Head>
@@ -20,10 +23,12 @@ export default function Home() {
 
       <header className={styles.header}>
         <nav>
-          <button className={styles.btn}>About PITAs</button>
-          <a href="#" className={styles.btn}>
-            Twitter
-          </a>
+          <div>
+            <button className={styles.btn} onClick={() => setIsOpen(true)}>
+              About PITAs
+            </button>
+            <Modal open={isOpen} onClose={() => setIsOpen(false)}></Modal>
+          </div>
         </nav>
       </header>
 
@@ -47,7 +52,9 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-        <a href="#">made by @1aurapadilla</a>
+        <p>
+          made by <a href="https://twitter.com/1aurapadilla">@1aurapadilla</a>
+        </p>
       </footer>
     </>
   );

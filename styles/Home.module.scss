@@ -48,6 +48,7 @@ header.header {
   width: 100%;
   padding: 1rem;
   font-size: 1.5rem;
+  margin-top: 4rem;
 }
 
 header.header nav {
@@ -60,16 +61,63 @@ article.marqueeContainer {
   width: 100vw;
 }
 
-.marquee {
+.modalWrapper {
   position: fixed;
   top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $white;
+  z-index: 999;
+  padding: 2rem;
+  border-radius: 10px;
+  border: 1px solid $black;
+  max-width: 640px;
+  width: 100%;
+}
+
+// close button on modal
+.closeModal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: $text-dark;
+  transition: all 0.3s ease;
+}
+
+.closeModal:hover {
+  background-color: $black;
+  color: $text-light;
+  border-radius: 5px;
+}
+
+.modalTitle {
+  font-family: Cirrus Cumulus;
+  font-size: min(8vw, 4rem);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
   left: 0;
   width: 100%;
-  font-size: 30vw;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 999;
+}
+
+.marquee {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-size: 2rem;
   overflow: hidden;
-  padding: 5px 10px;
+  padding: 1rem;
   z-index: -1;
-  transform: translateY(-50%);
 }
 
 @keyframes moveLeft {
@@ -87,9 +135,10 @@ article.marqueeContainer {
   display: block;
   position: relative;
   width: 100vw;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: $red;
+  // -webkit-text-fill-color: transparent;
+  // -webkit-text-stroke-width: 1px;
+  // -webkit-text-stroke-color: $red;
+  color: green;
 }
 
 main.main {
@@ -99,8 +148,9 @@ main.main {
 
 h1.title {
   font-size: min(8vw, 100px);
-  line-height: 1.2;
+  line-height: 1;
   letter-spacing: 0;
+  font-family: Cirrus Cumulus;
 }
 
 section.intro {
@@ -169,6 +219,7 @@ article.opened div.status {
 @media (min-width: 768px) {
   header.header {
     padding: 2rem 3rem;
+    margin-top: 4rem;
   }
 
   section.intro {
@@ -194,7 +245,6 @@ article.opened div.status {
   article div.status {
     width: 35px;
     height: 35px;
-
     border: 3px solid $black;
   }
 
@@ -203,16 +253,5 @@ article.opened div.status {
     width: 35px;
     height: 35px;
     border: 3px solid $black;
-  }
-
-  .marquee span {
-    animation: moveLeft 600s linear infinite;
-    white-space: nowrap;
-    display: block;
-    position: relative;
-    width: 100vw;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: $red;
   }
 }
